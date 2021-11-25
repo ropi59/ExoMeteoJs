@@ -4,7 +4,6 @@ body{
 }
 
 #field{
-    position: absolute;
     top: 50%;
     left: 50%;
     text-align: center;
@@ -13,8 +12,76 @@ body{
     color: blue;
 }
 
-#container{
-    position: absolute;
+#searchField{
+    font-size: 35px;
+    border-radius: 15px;
+}
+
+#validButton{
+    font-size: 35px;
+    border-radius: 15px;
+}
+
+#descriptionContainer{
     top: 50%;
     left: 50%;
+}
+
+#container{
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#presentation{
+    padding: 30px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    border-radius: 25px;
+    background-color: darkblue;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+#city{
+    margin: 0px;
+    font-size: 50px;
+}
+
+#title{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100px;
+}
+
+#details{
+    padding: 10px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    border-radius: 25px;
+    background-color: darkblue;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+#icone{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+#temp{
+    color: white;
+    font-size: 50px;
+}
+
+#condition{
+    color: white;
+    font-size: 40px;
 }
