@@ -80,14 +80,24 @@ function weather (value){
             date.setAttribute("id", "date");
 
             //fonction date
+            //decoupe de la date et transformation en string
             let day = value.list[i].dt_txt.split(" ");
             let dayString = day[0].toString();
+            //recuperation de l'heure sans les minutes
+            let hour = day[1].toString();
+            let hourString = hour.substring(0,5);
+            //decoupe de la date pour l'avoir en string
             let daySeparate = dayString.split("-");
             let prepareDate = daySeparate.toString();
+            //definition de la date recuperée au format date
             let dateToFormat = new Date(prepareDate);
+            //options de typage
             let options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
+            //insertion de la date au format francais avec nom du jour, du mois...
             date.innerText = new Intl.DateTimeFormat("fr-FR", options).format(dateToFormat);
+            //ajour de la date et de l'heure a mon bloc
             details.append(date)
+            details.append(hourString);
             
                 //ajout de la temperature min et max
                 let tempMoy = document.createElement("p");
